@@ -7,8 +7,6 @@ class ToolShed < Formula
   license "none"
   head "https://github.com/nitros9project/toolshed.git", branch: "main"
 
-  bottle :unneeded
-
   depends_on "markdown" => :build
 
   def install
