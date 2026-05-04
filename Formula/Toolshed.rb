@@ -17,6 +17,6 @@ class Toolshed < Formula
   end
 
   test do
-    assert_match "os9", shell_output("#{bin}/os9", 1)
+    assert_match "os9", shell_output("#{bin}/os9", 0)
   end
 end
