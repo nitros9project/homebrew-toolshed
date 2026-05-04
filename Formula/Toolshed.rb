@@ -1,13 +1,10 @@
-class ToolShed < Formula
+class Toolshed < Formula
   desc "Software tools for TRS-80 Color Computer and Dragon micro hobbyists"
   homepage "https://github.com/nitros9project/toolshed"
   url "https://codeload.github.com/nitros9project/toolshed/tar.gz/refs/tags/v2.5.1"
   sha256 "d133c5a1b340f5af7412243b1d0b8168215ee908b79861157e756767b6fe9a34"
-  version "2.5.1"
-  license "none"
+  license :cannot_represent
   head "https://github.com/nitros9project/toolshed.git", branch: "main"
-
-  depends_on "markdown"
 
   def install
     args = ["prefix=#{prefix}"]
@@ -20,7 +17,6 @@ class ToolShed < Formula
   end
 
   test do
-    # 'os9' is the main disk-image utility; it should print usage and exit non-zero
     assert_match "os9", shell_output("#{bin}/os9", 1)
   end
 end
