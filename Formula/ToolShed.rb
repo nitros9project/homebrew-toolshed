@@ -7,7 +7,7 @@ class ToolShed < Formula
   license "none"
   head "https://github.com/nitros9project/toolshed.git", branch: "main"
 
-  depends_on "markdown" => :build
+  depends_on "markdown"
 
   def install
     args = ["prefix=#{prefix}"]
