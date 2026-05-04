@@ -23,6 +23,6 @@ class ToolShed < Formula
 
   test do
     # 'os9' is the main disk-image utility; it should print usage and exit non-zero
-    assert_match "os9", shell_output("#{bin}/os9 2>&1", 1)
+    assert_match "os9", shell_output("#{bin}/os9", 1)
   end
 end
