@@ -1,10 +1,12 @@
 class Toolshed < Formula
   desc "Software tools for TRS-80 Color Computer and Dragon micro hobbyists"
   homepage "https://github.com/nitros9project/toolshed"
-  url "https://github.com/nitros9project/toolshed/releases/download/v2.6.0/toolshed-unix64-2.6.0.tgz"
-  sha256 "b7a6f84ac469e029ddbb4a2790e5d5edb20b35424ad385d9849eb748e99497f6"
+  url "https://github.com/nitros9project/toolshed/archive/refs/tags/v2.7.0.tar.gz"
+  sha256 "5452aac6a9d00c060c5033c9f80e4589719ab84a7eba11fb9c77630c31b1279f"
   license :cannot_represent
   head "https://github.com/nitros9project/toolshed.git", branch: "main"
+
+  depends_on "markdown" => :build
 
   def install
     args = ["prefix=#{prefix}"]
