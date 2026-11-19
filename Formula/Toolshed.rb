@@ -9,6 +9,8 @@ class Toolshed < Formula
   depends_on "markdown" => :build
 
   def install
+    # The bundled command tests expect newly copied files to have current times.
+    ENV.delete "SOURCE_DATE_EPOCH"
     args = ["prefix=#{prefix}"]
 
     # Build cocofuse only if FUSE is available on the host
